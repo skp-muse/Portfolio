@@ -1,7 +1,5 @@
 ## Portfolio
 
-### Markdown
-
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
@@ -22,12 +20,14 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+```python
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/skp-muse/portfolio/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+import sys
+import logging
 
-### Support or Contact
+# Helper function to pinpoint errors including error type and line number
+def errorHandling():
+    return 'Error: {}. {}, line: {}'.format(sys.exc_info()[0], sys.exc_info()[1], sys.exc_info()[2].tb_lineno)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```
