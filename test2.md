@@ -4,8 +4,37 @@ title: "test page2"
 permalink: /test2/
 ---
 
-# Test Header
+#customerTableCreation.sql
+```sql
+CREATE DATABASE IF NOT EXISTS customer_information_project;
 
+USE customer_information_project;
+
+/* Additional data validation is performed in accompanying python scripts */
+CREATE TABLE customer (
+    customer_id INT NOT NULL auto_increment,
+    first_name VARCHAR(32),
+    last_name VARCHAR(32),
+    phone_number INT,
+    phone_extension INT,
+    email VARCHAR(64),
+    city VARCHAR(32),
+    state VARCHAR(2),
+    zipcode INT,
+    creation_date DATETIME NOT NULL,
+    updated_date DATETIME NOT NULL,
+    PRIMARY KEY(customer_id)
+) AUTO_INCREMENT=1;
+
+CREATE USER 'customerProjectUser'@'localhost' IDENTIFIED BY 'H-s)6Gd{D.';
+
+GRANT INSERT, SELECT, UPDATE, DELETE ON customer_information_project.customer TO customerProjectUser@'localhost';
+
+/* So that new permissions can immediately take affect */
+FLUSH PRIVILEGES 
+```
+
+#mySQLTransactionModule.py
 ```python
 # Functions to connect Python code with an existing mySQL database for the customer information project.
 # Sarah Pressler - July 2020
