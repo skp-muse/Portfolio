@@ -7,3 +7,11 @@
    color: #ff0000;
  }
 }
+.button {
+  padding: 15px;
+  border-radius: 50%;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: #ebeef5; /* Grey */
+}
