@@ -8,7 +8,7 @@ This portfolio is a space to showcase my growth in software development principl
 
 On this page I have placed a code review of some earlier work in Python and SQL that comes from my now completed bachelor’s program of computer science. This review covers important considerations such as security and overall soundness of design, some of which is clearly missed in this initial example.  
 
-[![Image](/assets/codeReview.png)](https://snhu-my.sharepoint.com/:v:/r/personal/sarah_pressler_snhu_edu/Documents/codeReview.mp4?csf=1&web=1&e=LXYDX8)
+[![Image](/assets/codeReview.png)](https://drive.google.com/file/d/1TOHhEwz8-G-FAkldC9sZEASqkqkWopwd/view?usp=sharing)
 
 ### Simulated Project
 
