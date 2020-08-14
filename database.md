@@ -3,8 +3,11 @@ layout: test
 title: "Database Integration"
 permalink: /database/
 ---
+## Designing a Database
 
-#customerTableCreation.sql
+## Using mySQL
+
+## customerTableCreation.sql
 ```sql
 CREATE DATABASE IF NOT EXISTS customer_information_project;
 
