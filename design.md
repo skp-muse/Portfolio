@@ -1,7 +1,7 @@
 ---
 layout: test
-title: "test page"
-permalink: /test/
+title: "Algorithms and Design"
+permalink: /design/
 ---
 
 # Overall Design
