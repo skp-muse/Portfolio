@@ -1,4 +1,4 @@
-## Professional Development
+## Introduction
 
 This portfolio is a space to showcase my growth in software development principles. I have worked in IT organizations both large and small for over 7 years and have gained appreciation for the need to research new skills and methods for solving problems. Technology is a tool to be used for finding logical solutions that both adhere to development best practices as well as real world considerations. 
 
