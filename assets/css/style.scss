@@ -8,9 +8,12 @@
  }
 }
 .button {
-  padding-right: 25px;
   transition-duration: 0.4s;
 }
 .button:hover {
   background-color: #ebeef5; /* Grey */
+}
+.div-button {
+  padding: 25px; 
+  margin: 25px;
 }
