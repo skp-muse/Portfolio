@@ -1,5 +1,5 @@
 ---
-layout: test
+layout: default
 title: "Database Integration"
 permalink: /database/
 ---
