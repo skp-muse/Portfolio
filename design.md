@@ -1,5 +1,5 @@
 ---
-layout: test
+layout: default
 title: "Algorithms and Design"
 permalink: /design/
 ---
