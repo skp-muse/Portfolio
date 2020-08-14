@@ -5,8 +5,6 @@ permalink: /database/
 ---
 ## Designing a Database
 
-## Using mySQL
-
 ## customerTableCreation.sql
 ```sql
 CREATE DATABASE IF NOT EXISTS customer_information_project;
@@ -37,7 +35,10 @@ GRANT INSERT, SELECT, UPDATE, DELETE ON customer_information_project.customer TO
 FLUSH PRIVILEGES 
 ```
 
-#mySQLTransactionModule.py
+## Using mySQL
+
+
+## mySQLTransactionModule.py
 ```python
 # Functions to connect Python code with an existing mySQL database for the customer information project.
 # Sarah Pressler - July 2020
