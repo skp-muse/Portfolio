@@ -8,9 +8,13 @@
  }
 }
 .button {
-  padding: 15px;
+  padding: 25px;
   border-radius: 15px 35px;
   transition-duration: 0.4s;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 .button:hover {
   background-color: #ebeef5; /* Grey */
