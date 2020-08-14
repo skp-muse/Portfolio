@@ -4,9 +4,12 @@ title: "test page"
 permalink: /test/
 ---
 
-# Test Header
+# Design
 
-#customerWorkbookScript.py
+
+
+
+# customerWorkbookScript.py
 ```python
 # Script to read an Excel workbook for customer information collection project. Row information is first validated through regular expressions and then built in Python for use in mySQL transactions.
 # Sarah Pressler - July 2020
