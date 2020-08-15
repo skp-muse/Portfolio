@@ -8,9 +8,9 @@ permalink: /design/
 
 The primary goal of this sample project was to gain practice in scripting a scenario that marries real world application with software design principles. This project is primarily concerned with building a contact list of names with phone or email and other associated data. The first step was to use Python, a popular and flexible language for automation tasks, to read an Excel workbook and validate its data. By using [openpyxl](https://openpyxl.readthedocs.io/en/stable/) I gained the capability to casually read Microsoft's .xlsx filetype. The data is then validated within the Python script where we set up our expectations for the spreadsheet data and validate it, primarily through the use of [regular expressions](https://www.regular-expressions.info/). Data is not very useful without somewhere to store it, and so a database connection was formed with [mySQL](https://www.mysql.com/), a popular SQL platform that provides tools for integration with today's multitude of platforms and services. Included in their toolset is a feature rich Python module for assisting with database transactions.
 
-## Overall Design
+## Additional Design Decisions
 
-Regular expressions can provide multiple paths to this validation, such as with phone numbers in the form of ###-###-#### or (###)###-####. These various extra characters can then be stripped from the information for simple storage of digits into a SQL database.  
+Regular expressions can provide multiple paths to data validation, such as with phone numbers in the form of '###-###-####' or '(###)###-####'. These various extra characters can then be stripped from the information for simple storage of digits into a SQL database. The 'phoneRegex' in the sample code below is capable of reading phone numbers in either of the above formats and with an optional extenseion such as 'ext###' or 'x#####'.
 
 ```python
 nameRegex = re.compile("^[a-zA-Z '.-]*$")
