@@ -6,16 +6,11 @@ permalink: /design/
 
 ## Simulated Data Collection Project
 
-The primary goal of this sample project was to gain practice in scripting a scenario that marrys real world application with software design principles. The first step was to use Python, a popular and flexible language for automation tasks, to read an Excel workbook and validate it's data. 
-
+The primary goal of this sample project was to gain practice in scripting a scenario that marries real world application with software design principles. This project is primarily concerned with building a contact list of names with phone or email and other associated data. The first step was to use Python, a popular and flexible language for automation tasks, to read an Excel workbook and validate its data. By using [openpyxl](https://openpyxl.readthedocs.io/en/stable/) I gained the capability to casually read Microsoft's .xlsx filetype. The data is then validated within the Python script where we set up our expectations for the spreadsheet data and validate it, primarily through the use of [regular expressions](https://www.regular-expressions.info/). Data is not very useful without somewhere to store it, and so a database connection was formed with [mySQL](https://www.mysql.com/), a popular SQL platform that provides tools for integration with today's multitude of platforms and services. Included in their toolset is a feature rich Python module for assisting with database transactions.
 
 ## Overall Design
 
-By using [openpyxl](https://openpyxl.readthedocs.io/en/stable/) I gained the capability to casually read Microsoft's .xlsx filetype. 
-
-I’ve taken these important considerations and produced further work that simulates a simple information collection project for customer contacts. This project is primarily concerned with building a contact list of names with phone or email and other associated data. 
-
-Data is then validated though regular expressions that determine if information entered fits certain parameters. These expressions can provide multiple paths to this validation, such as with phone numbers in the form of ###-###-#### or (###)###-####. These various extra characters can then be stripped from the information for simple storage of digits into a SQL database.  
+Regular expressions can provide multiple paths to this validation, such as with phone numbers in the form of ###-###-#### or (###)###-####. These various extra characters can then be stripped from the information for simple storage of digits into a SQL database.  
 
 ```python
 nameRegex = re.compile("^[a-zA-Z '.-]*$")
@@ -24,13 +19,9 @@ emailRegex = re.compile("(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 zipcodeRegex = re.compile("^\d{5}(?:[-\s]\d{4})?$")
 ```
 
-## Writing Quality Code
-
-
 ## Algorithms
 
-
-
+## Writing Quality Code
 
 ## customerWorkbookScript.py
 ```python
