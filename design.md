@@ -10,6 +10,26 @@ The primary goal of this sample project was to gain practice in scripting a scen
 
 ## Additional Design Decisions
 
+The code in customerWorkbookScript.py below consists of several Python try/except blocks such as the one in this function:
+
+```python
+# Helper function to determine handling of given cell.value
+def validateCellValue(cell, regex):
+	try:
+		fullMatch = regex.fullmatch((str(cell.value)))
+		if fullMatch is None:
+			return None
+		return fullMatch.string
+	except TypeError:
+			return None
+	except AttributeError: 
+			return None
+	except:
+		logging.error(errorHandling())
+```
+
+This is a common best practice for Python in order to control program flow in edge cases or unexpected behaviors. In the case of a 'TypeError' or 'AttributeError' the function knows to return an empty value for the Excel cell provided. This is because the data provided does not match our validation criteria and we will simply dump that data so it is not stored in our eventual database. Later in this process we make sure the records from Excel have either a valid phone number or email along with a customer name as that was the stated primary goal of the sample project. Any other issue is caught by the general 'except' where the script is halted and a detail error message written to our log for future improvement of the script.
+
 Regular expressions can provide multiple paths to data validation, such as with phone numbers in the form of '###-###-####' or '(###)###-####'. These various extra characters can then be stripped from the information for simple storage of digits into a SQL database. The 'phoneRegex' in the sample code below is capable of reading phone numbers in either of the above formats and with an optional extenseion such as 'ext###' or 'x#####'.
 
 ```python
@@ -18,10 +38,6 @@ phoneRegex = re.compile("^((\d{3}-)|(\(\d{3}\)))\d{3}-\d{4}((x|ext)\d{1,6})?$")
 emailRegex = re.compile("(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 zipcodeRegex = re.compile("^\d{5}(?:[-\s]\d{4})?$")
 ```
-
-## Algorithms
-
-## Writing Quality Code
 
 ## customerWorkbookScript.py
 ```python
