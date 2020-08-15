@@ -4,9 +4,25 @@ title: "Algorithms and Design"
 permalink: /design/
 ---
 
+## Simulated Data Collection Project
+
+The primary goal of this sample project was to gain practice in scripting a scenario that marrys real world application with software design principles. The first step was to use Python, a popular and flexible language for automation tasks, to read an Excel workbook and validate it's data. 
+
+
 ## Overall Design
 
-The primary goal of this sample project was to gain practice in scripting a scenario that marrys real world application with software design principles. The first step was to use Python, a popular and flexible language for automation tasks, to read an Excel workbook and validate it's data. By using [openpyxl](https://openpyxl.readthedocs.io/en/stable/) I gained the capability to casually read Microsoft's .xlsx filetype. 
+By using [openpyxl](https://openpyxl.readthedocs.io/en/stable/) I gained the capability to casually read Microsoft's .xlsx filetype. 
+
+I’ve taken these important considerations and produced further work that simulates a simple information collection project for customer contacts. This project is primarily concerned with building a contact list of names with phone or email and other associated data. 
+
+Data is then validated though regular expressions that determine if information entered fits certain parameters. These expressions can provide multiple paths to this validation, such as with phone numbers in the form of ###-###-#### or (###)###-####. These various extra characters can then be stripped from the information for simple storage of digits into a SQL database.  
+
+```python
+nameRegex = re.compile("^[a-zA-Z '.-]*$")
+phoneRegex = re.compile("^((\d{3}-)|(\(\d{3}\)))\d{3}-\d{4}((x|ext)\d{1,6})?$")
+emailRegex = re.compile("(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
+zipcodeRegex = re.compile("^\d{5}(?:[-\s]\d{4})?$")
+```
 
 ## Writing Quality Code
 
