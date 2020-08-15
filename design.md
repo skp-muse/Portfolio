@@ -39,8 +39,11 @@ emailRegex = re.compile("(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 zipcodeRegex = re.compile("^\d{5}(?:[-\s]\d{4})?$")
 ```
 
-## Code Quality
+## Code & Algorithm Quality
 
+Education and experience have taught me that quality code requires a wholistic approach. This means continual review and stress testing during the writing process. By expecting poor conditions we can create more reliable and resistant services. Similarly, maintaining consistent style and documentation results in readable code that is easily adjusted when revisiting projects in the future.  
+
+While the logic in these example scripts are relatively straightforward, efforts are still made to maintain a level of efficiency in its algorithms. Whenever possible, we should strive to examine data only once and avoid nested loops that exponentially increase run time.  In the customerWorkbookScript.py on this page we do makes some exceptions. For instance, the entered Excel data is technically examined twice. First for adherence to workbook structure rule and second for data validation. This only because I believed these two distinct issues might produce different behaviors based on exceptions or other edge cases. If we combine operations into singular monolithic iterations, we can increase efficiency at the cost of reduced readability. Such decisions can be made but should be done cautiously. 
 
 ## customerWorkbookScript.py
 ```python
