@@ -39,6 +39,9 @@ emailRegex = re.compile("(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 zipcodeRegex = re.compile("^\d{5}(?:[-\s]\d{4})?$")
 ```
 
+## Code Quality
+
+
 ## customerWorkbookScript.py
 ```python
 # Script to read an Excel workbook for customer information collection project. Row information is first validated through regular expressions and then built in Python for use in mySQL transactions.
