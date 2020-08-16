@@ -3,9 +3,6 @@
 
 @import "{{ site.theme }}";
 .main-content {
-  h1 {
-   color: #ff0000;
- }
 }
 .page-header {
   button {
@@ -16,6 +13,6 @@
     transition-duration: 0.4s;
   }
   button:hover {
-    background-color: #ebeef5; /* Grey */
+    background-color: #b7b7b7; /* Dark Grey */
   }
 }
