@@ -49,9 +49,7 @@ cursor.execute("SELECT phone_number, phone_extension FROM customer")
 customerPhoneList = list(cursor.fetchall())
 ```
 
-In this second example we also use a mySQL cursor, this time to execute many SQL transactions. 
-
-This could lead to the inherent issue of transactions being interrupted before all are complete. 
+In this second example we also use a mySQL cursor, this time to execute many SQL transactions. This could lead to an issue of transactions being interrupted before all are complete. This is part of  the reason for using a SQL framework like mySQL which requires the final commit step. This commit action either ensures transactions are handled in their entirety or not at all.
 
 ```python
 cursor = conn.cursor()
