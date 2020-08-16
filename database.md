@@ -5,7 +5,7 @@ permalink: /database/
 ---
 ## Designing a Database
 
-I made the decision early to use a flavor of SQL as that language is classic among databases due to its power and flexibility. [mySQL](https://www.mysql.com/) was chosen because of its ongoing support for a wider variety of platforms that include a Python module for handling database connections. The database itself holds a very abstract version of our data that is stripped of any excess symbols. We rely on intelligent Python scripting to handle data validation and...
+I made the decision early to use a flavor of SQL as that language is classic among databases due to its power and flexibility. [mySQL](https://www.mysql.com/) was chosen because of its ongoing support for a wider variety of platforms that include a Python module for handling database connections. mySQL can be deployed on a variety of systems, so starting a local service on a workstation is no large feat and what I used to test this project. The program suite provides a variety of tools for managing and altering databases but is no replacement for knowledge of regular SQL syntax like that in the database creation script below. The database itself holds a very abstract version of our data that is stripped of any excess symbols. We rely on intelligent Python scripting to handle data validation and other logic such that the actual SQL database creation commands are quite simple and straightforward. We protect this database by carefully encapsulating the actual transactions. 
 
 ## customerTableCreation.sql
 ```sql
@@ -39,6 +39,7 @@ FLUSH PRIVILEGES
 
 ## Using mySQL
 
+mySQL can be deployed on a variety of systems, so starting a local service on a workstation is no large feat. The program suite provides a variety of tools for managing and altering databases but is no replacement for knowledge of regular SQL syntax like that in the database creation script.
 
 ## mySQLTransactionModule.py
 ```python
