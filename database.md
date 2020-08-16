@@ -39,17 +39,19 @@ FLUSH PRIVILEGES
 
 ## Using mySQL
 
-For security reasons a database should be treated as a separate service and program. In the sample project I practiced that by writing a separate mySQLTransactionModule.py that could properly encapsulate the database connection and transactions away from the main script. 
+For security reasons a database should be treated as a separate service and program. In the sample project I practiced that by writing a separate mySQLTransactionModule.py that could properly encapsulate the database connection and transactions away from the main script. This module connects to the actual database with its internal ```python __connect()``` method. This method could be improved by storing the password more securely or prompting for it at run time. Either way, the [bcrypt](https://www.npmjs.com/package/bcrypt) Python module is a good example of how that might be accomplised.
 
-the internal ```python __connect()``` method
-
-[bcrypt](https://www.npmjs.com/package/bcrypt)
+Transactions through Python with the mySQL connector are a straightforward affair. In the first example below we see and example of a SELECT transaction. The 'conn' object from which we pull the cursos is simply the established database connection and that cursor is then called to execute the simple read command and to grab a Python list of the associated data.
 
 ```python
 cursor = conn.cursor()
 cursor.execute("SELECT phone_number, phone_extension FROM customer")
 customerPhoneList = list(cursor.fetchall())
 ```
+
+In this second example we also use a mySQL cursor, this time to execute many SQL transactions. 
+
+This could lead to the inherent issue of transactions being interrupted before all are complete. 
 
 ```python
 cursor = conn.cursor()
