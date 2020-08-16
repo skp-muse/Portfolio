@@ -39,7 +39,23 @@ FLUSH PRIVILEGES
 
 ## Using mySQL
 
-mySQL can be deployed on a variety of systems, so starting a local service on a workstation is no large feat. The program suite provides a variety of tools for managing and altering databases but is no replacement for knowledge of regular SQL syntax like that in the database creation script.
+For security reasons a database should be treated as a separate service and program. In the sample project I practiced that by writing a separate mySQLTransactionModule.py that could properly encapsulate the database connection and transactions away from the main script. 
+
+the internal ```python __connect()``` method
+
+[bcrypt](https://www.npmjs.com/package/bcrypt)
+
+```python
+cursor = conn.cursor()
+cursor.execute("SELECT phone_number, phone_extension FROM customer")
+customerPhoneList = list(cursor.fetchall())
+```
+
+```python
+cursor = conn.cursor()
+cursor.executemany(sql, val)
+conn.commit()
+```
 
 ## mySQLTransactionModule.py
 ```python
