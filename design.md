@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Algorithms and Design"
-description: A Portfolio by Sarah Pressler
 permalink: /design/
 ---
 
