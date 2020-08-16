@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Introduction"
+permalink: /portfolio/
+---
+
 ## Introduction & Sample Project 
 
 With over 7 years experience in proffessional IT environments and now a completed bachelor's in computer science, this portfolio is a space to showcase my growth in software development principles. In my work with IT organizations both large and small I have gained appreciation for the need to research new skills and methods for solving problems. Technology is a tool to be used for finding logical solutions that both adhere to development best practices as well as real world considerations. Solving day to day problems can often fit the form of scripting for repitive or lengthy tasks. 
