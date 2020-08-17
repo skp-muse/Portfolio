@@ -45,6 +45,8 @@ Education and experience have taught me that quality code requires a wholistic a
 
 While the logic in these example scripts are relatively straightforward, efforts are still made to maintain a level of efficiency in its algorithms. Whenever possible, we should strive to examine data only once and avoid nested loops that exponentially increase run time.  In the customerWorkbookScript.py on this page we do makes some exceptions. For instance, the entered Excel data is technically examined twice. First for adherence to workbook structure rule and second for data validation. This only because I believed these two distinct issues might produce different behaviors based on exceptions or other edge cases. If we combine operations into singular monolithic iterations, we can increase efficiency at the cost of reduced readability. Such decisions can be made but should be done cautiously. 
 
+The continual challenge to writing quality code is in allowing time for review and testing. Ideally, even simple scripts should be accompanied by testing frameworks so that said testing can be run and rerun as environments change. In customerWorkbookScript.py below the best defense we have is in robust error handling that can gracefully terminate the process and provide information on what went wrong. Testing and documentation ares some of the most frequent short cuts in software development and neglecting those efforts will surely increas the technical debt of the code and hinder future revisions.
+
 ## customerWorkbookScript.py
 ```python
 # Script to read an Excel workbook for customer information collection project. Row information is first validated through regular expressions and then built in Python for use in mySQL transactions.
